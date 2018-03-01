@@ -1,0 +1,8 @@
+rootProject.name = "common-test"
+
+include "common-test-base"
+include "common-test-biz"
+include "common-test-service"
+include "common-test-web"
+include "common-crawler"
+
