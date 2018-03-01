@@ -20,3 +20,33 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+*/bin
+*/bin/*
+*/log
+*/log/*
+/logs/
+*/logs
+*/logs/*
+*/build
+*/build/*
+*/output
+*/output/*
+.classpath
+.project
+*/.classpath
+*/.project
+output
+*.iml
+.idea/*
+# ignore all folder named configure, if you want to exclude, add line "!/myfoloder/configure" 
+configure/
+.settings/
+.gradle/
+/bin/
+.svn
+.DS_Store
+*/.DS_Store
+/jacoco.exec
+
+/target/
