@@ -113,11 +113,12 @@ subprojects {
 		compile "com.alibaba:fastjson:1.2.9"
 		compile "org.apache.zookeeper:zookeeper:3.4.6"
 		compile "tomcat:catalina:4.1.34"
+		compile "org.apache.commons:commons-collections4:4.1"
 				
 		testCompile "org.springframework:spring-test:${springVersion}"
 		testCompile "org.jmock:jmock-junit4:2.6.0"
 		testCompile "junit:junit:4.11"
-		testCompile "org.dbunit:dbunit:2.4.9"
+		testCompile "org.dbunit:dbunit:2.4.9"		
 		
 		compile fileTree(dir: libDir, include: '*.jar')	
 		
