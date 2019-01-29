@@ -54,7 +54,7 @@ subprojects {
     }
 
     dependencies {
-        compile "org.projectlombok:lombok:1.12.2"
+        compile "org.projectlombok:lombok:1.18.4"
         //compile "mcpack-j:mcpack-j:1.0.FCSUN.TRAIN"
         compile "org.springframework:spring-core:${springVersion}"
         compile "org.springframework:spring-beans:${springVersion}"
@@ -117,7 +117,7 @@ subprojects {
         compile "org.apache.poi:poi-ooxml-schemas:3.17"
         compile "org.apache.poi:poi-ooxml:3.17"
         compile "org.apache.poi:poi:3.17"
-        compile group: 'com.netflix.hystrix', name: 'hystrix-core', version: '1.5.18'
+        compile "com.netflix.hystrix:hystrix-core:1.5.18"
 
         testCompile "org.springframework:spring-test:${springVersion}"
         testCompile "org.jmock:jmock-junit4:2.6.0"

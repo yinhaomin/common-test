@@ -2,7 +2,6 @@ package com.island.common.test.service.equals;
 
 import java.util.Map;
 
-import com.baidu.common.test.service.stringbuilder.David;
 import com.google.common.collect.Maps;
 import com.island.common.test.service.stringbuilder.David;
 

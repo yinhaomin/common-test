@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.collections.map.MultiKeyMap;
-import org.junit.Test;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -22,7 +21,7 @@ public class MapTest {
 
 	}
 
-	@Test
+
 	public void testMultiKeyMap() {
 		// 初始化类
 		MultiKeyMap multiKeyMap = MultiKeyMap.decorate(new LinkedMap());

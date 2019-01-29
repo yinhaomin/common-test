@@ -7,7 +7,7 @@ public class JsonTest {
 
     public static void main(String[] args) {
         TestBo testBo = new TestBo();
-        testBo.setId(1);
+        testBo.setId(1L);
         testBo.setName("name");
 
         String alibabaJson = JSON.toJSONString(testBo);

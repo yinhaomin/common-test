@@ -1,13 +1,13 @@
 package com.baidu.common.test.base.transaction;
 
-import java.util.Stack;
+import lombok.extern.slf4j.Slf4j;
 
-import lombok.extern.log4j.Log4j;
+import java.util.Stack;
 
 /**
  * 应用层事务 Created by cheng.dai on 15/5/20.
  */
-@Log4j
+@Slf4j
 public class Transaction {
     /**
      * 事务名称
@@ -34,13 +34,13 @@ public class Transaction {
 
     /**
      * 事务执行原子操作
-     * 
+     *
      * @param transactionOperation
      */
     public Object execute(TransactionOperation transactionOperation) {
         if (this.transactionStatus.getStatus() == TransactionStatus.ROLLBACK_ONLY) {
-            throw new TransactionException(getTransactionName()
-                    + " has been set rollback-only, transaction starts to" + " rollback");
+            throw new TransactionException(getTransactionName() + " has been set rollback-only, transaction starts " +
+                    "to" + " rollback");
         }
         if (this.transactionStatus.getStatus() == TransactionStatus.INIT) {
             this.transactionStatus.setStatus(TransactionStatus.EXECUTING);
@@ -57,7 +57,7 @@ public class Transaction {
 
     /**
      * 事务执行回滚 倒序执行操作栈中的Operation 执行过程中如遇到某个Operation回滚失败，记日志，不影响其他Operation的回滚执行
-     * 
+     *
      * @param transactionContext
      */
     public void rollback(TransactionContext transactionContext) {
@@ -79,13 +79,13 @@ public class Transaction {
     }
 
     private void rollbackOperation(TransactionOperation transactionOperation, TransactionStatus transactionStatus,
-            TransactionContext transactionContext) {
+                                   TransactionContext transactionContext) {
         try {
             transactionOperation.rollback(transactionContext);
         } catch (Exception e) {
             transactionStatus.setStatus(TransactionStatus.ROLLBACK_ERROR);
-            log.error(String.format(getTransactionName() + " rollback operation[%s] error", transactionOperation
-                    .getName()), e);
+            //log.error(String.format(getTransactionName() + " rollback operation[%s] error", transactionOperation
+            //        .getName()), e);
         }
     }
 
